@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "tarkovsearch",
+  "version": "${version}",
+  "name": "Tarkov Search",
+  "description": "Когда вы впервые открываете сгенерированный сундук, содержимое на время прячется под иконкой лупы и проявляется по одному предмету в случайном порядке — чисто визуальный эффект, генерация лута не меняется.",
+  "authors": [
+    "you"
+  ],
+  "contact": {},
+  "license": "CC0-1.0",
+  "icon": "assets/tarkovsearch/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.tarkovsearch.TarkovSearchMod"
+    ],
+    "client": [
+      "com.tarkovsearch.client.TarkovSearchClient"
+    ]
+  },
+  "mixins": [
+    "tarkovsearch.mixins.json",
+    {
+      "config": "tarkovsearch.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
