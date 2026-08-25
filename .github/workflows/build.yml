@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: tarkov-search-mod/tarkov-search-mod
+        working-directory: tarkov-search-mod
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -39,5 +39,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: tarkov-search-mod-jar
-          path: tarkov-search-mod/tarkov-search-mod/build/libs/*.jar
+          path: tarkov-search-mod/build/libs/*.jar
           if-no-files-found: error
